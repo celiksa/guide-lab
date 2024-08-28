@@ -10,6 +10,10 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+RUN npm install -D tailwindcss postcss autoprefixer
+
+RUN npx tailwindcss init
+
 # Copy the rest of the application
 COPY . .
 
@@ -23,7 +27,7 @@ FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 3000
 
 # Command to run the app
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "start"]
