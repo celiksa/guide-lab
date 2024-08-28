@@ -142,7 +142,7 @@ const SetupGuide: React.FC = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg shadow-lg">
-      <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">IBM Watsonx.ai Lab Ortam Kurulum Rehberi</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">IBM Watsonx.ai Techzone Lab Ortam Kurulum Rehberi</h1>
       <p className="text-gray-600 mb-8 text-center">Bu rehber, adım adım Watsonx.ai ortamınızı hazırlamanıza yardımcı olacaktır.</p>
       {steps.map((step, index) => (
         <AccordionItem
